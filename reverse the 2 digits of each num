@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class ReverseDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+       
+       
+        if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99 || num3 < 10 || num3 > 99) {
+            System.out.println("Please enter valid two-digit numbers.");
+        } else {
+           
+            int reversedNum1 = reverseDigits(num1);
+            int reversedNum2 = reverseDigits(num2);
+            int reversedNum3 = reverseDigits(num3);
+           
+         
+            System.out.println( reversedNum1 + ", " + reversedNum2 + ", " + reversedNum3);
+        }
+       
+       
+    }
+
+ 
+    public static int reverseDigits(int num) {
+        int tens = num / 10;
+        int units = num % 10;
+        return units * 10 + tens;
+    }
+}
