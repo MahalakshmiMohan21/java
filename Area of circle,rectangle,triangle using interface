@@ -29,15 +29,15 @@ public class Main{
         Scanner sc = new Scanner(System.in);
         GetArea m=new GetArea();
         
-        System.out.print("enter radius: ");
+        System.out.print("Enter radius: ");
         double radius=sc.nextDouble();
-         System.out.print("enter length: ");
+         System.out.print("Enter length: ");
         double  length=sc.nextDouble();
-          System.out.print("enter width: ");
+          System.out.print("Enter width: ");
         double width=sc.nextDouble();
-          System.out.print("enter the breadth: ");
+          System.out.print("Enter the breadth: ");
         double  breadth=sc.nextDouble();
-          System.out.print("enter the height: ");
+          System.out.print("Enter the height: ");
         double height=sc.nextDouble();
        
          System.out.print("Area of circle: ");
