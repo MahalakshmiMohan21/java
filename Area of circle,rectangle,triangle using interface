@@ -1,0 +1,52 @@
+ import java.util.*;
+ interface Circle{
+     void circleArea(double  r);
+}
+ interface Rectangle{
+    void rectArea(double l,double  w);
+}
+ interface Triangle{
+    void triangArea( double b,double  h);
+}
+class GetArea implements Circle,Rectangle,Triangle{
+    private double area;
+    public void circleArea(double  r){
+        area=3.14*r*r;
+        System.out.println(area);
+    }
+    public void rectArea(double l,double  w){
+        area=l*w;
+        System.out.println(area);
+        
+    }
+    public void triangArea( double b,double  h){
+        area=0.5*b*h;
+        System.out.println(area);
+    }
+}
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        GetArea m=new GetArea();
+        
+        System.out.print("enter radius: ");
+        double radius=sc.nextDouble();
+         System.out.print("enter length: ");
+        double  length=sc.nextDouble();
+          System.out.print("enter width: ");
+        double width=sc.nextDouble();
+          System.out.print("enter the breadth: ");
+        double  breadth=sc.nextDouble();
+          System.out.print("enter the height: ");
+        double height=sc.nextDouble();
+       
+         System.out.print("Area of circle: ");
+        m.circleArea(radius);
+         System.out.print("Area of rectangle: ");
+        m.rectArea(length,width);
+         System.out.print("Area of triangle: ");
+        m.triangArea(breadth,height);
+        
+        
+    }
+}
