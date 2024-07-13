@@ -10,7 +10,7 @@ class Main{
                 if(i<s1.length()-1 && Character.isDigit(s1.charAt(i+1))){
                     int b=Integer.parseInt(""+a+s1.charAt(i+1));
                     sum+=b;
-                    
+                    i++;
                 }
                 
                 else{
