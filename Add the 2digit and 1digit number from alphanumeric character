@@ -1,0 +1,26 @@
+import java.util.*;
+class Main{
+    public static void main(String []arg){
+        Scanner sc =new Scanner(System.in);
+        String s1=sc.nextLine();
+        int sum=0;
+        for(int i=0;i<s1.length();i++){
+            char a=s1.charAt(i);
+            if(Character.isDigit(a)){
+                if(i<s1.length()-1 && Character.isDigit(s1.charAt(i+1))){
+                    int b=Integer.parseInt(""+a+s1.charAt(i+1));
+                    sum+=b;
+                    
+                }
+                
+                else{
+                int b=Character.getNumericValue(a);
+                sum += b;
+                }
+            }
+           
+        }
+         System.out.println(sum);
+        
+    }
+}
