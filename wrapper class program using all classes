@@ -1,0 +1,66 @@
+package number;
+
+public class Wrapper {
+    public static void main(String[] args) {
+        // Primitive values
+        byte i2 = 10;  
+        short i3 = 20;  
+        int i4 = 30;  
+        long i5 = 1123446798L; 
+        float i6 = 50.0F; 
+        double i7 = 60.0D; 
+        char i8 = 'a';  
+        boolean i9 = true;
+
+        // Primitive to object
+        Byte j2 = Byte.valueOf(i2);  
+        Short j3 = Short.valueOf(i3);  
+        Integer j4 = Integer.valueOf(i4);  
+        Long j5 = Long.valueOf(i5);
+        Float j6 = Float.valueOf(i6);
+        Double j7 = Double.valueOf(i7); 
+        Character j8 = Character.valueOf(i8); 
+        Boolean j9 = Boolean.valueOf(i9);
+
+        // Object to primitive
+        byte q2 = j2.byteValue();  
+        short q3 = j3.shortValue();
+        int q4 = j4.intValue();  
+        long q5 = j5.longValue(); 
+        float q6 = j6.floatValue();
+        double q7 = j7.doubleValue();  
+        char q8 = j8.charValue();  
+        boolean q9 = j9.booleanValue();
+
+        // Printing out the values
+        System.out.println("Primitive values:");
+        System.out.println("byte: " + i2);
+        System.out.println("short: " + i3);
+        System.out.println("int: " + i4);
+        System.out.println("long: " + i5);
+        System.out.println("float: " + i6);
+        System.out.println("double: " + i7);
+        System.out.println("char: " + i8);
+        System.out.println("boolean: " + i9);
+
+        System.out.println("\nPrimitive to object:");
+        System.out.println("Byte: " + j2);
+        System.out.println("Short: " + j3);
+        System.out.println("Integer: " + j4);
+        System.out.println("Long: " + j5);
+        System.out.println("Float: " + j6);
+        System.out.println("Double: " + j7);
+        System.out.println("Character: " + j8);
+        System.out.println("Boolean: " + j9);
+
+        System.out.println("\nObject to primitive:");
+        System.out.println("byte: " + q2);
+        System.out.println("short: " + q3);
+        System.out.println("int: " + q4);
+        System.out.println("long: " + q5);
+        System.out.println("float: " + q6);
+        System.out.println("double: " + q7);
+        System.out.println("char: " + q8);
+        System.out.println("boolean: " + q9);
+    }
+}
