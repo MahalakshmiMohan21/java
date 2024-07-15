@@ -1,0 +1,57 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class PopularElement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+
+        
+        int[] arr = new int[n];
+
+       
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        
+        int popularElement = findPopularElement(arr);
+
+       
+        System.out.println("Popular element: " + popularElement);
+
+        
+    }
+
+    public static int findPopularElement(int[] arr) {
+        int n = arr.length;
+        int threshold = n / 4;
+        Arrays.sort(arr);
+        int currentCount = 1;
+        int popularElement = -1;
+
+       
+        for (int i = 1; i < n; i++) {
+            if (arr[i] == arr[i - 1]) {
+                currentCount++;
+            } else {
+                if (currentCount > threshold) {
+                    popularElement = arr[i - 1];
+                    break;
+                }
+                currentCount = 1; 
+            }
+        }
+
+       
+        if (currentCount > threshold) {
+            popularElement = arr[n - 1];
+        }
+
+        return popularElement;
+    }
+}
