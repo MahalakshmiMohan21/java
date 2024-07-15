@@ -1,0 +1,16 @@
+package checksumof2numisevenorodd;
+import java.util.*;
+public class Checksumof2numisevenorodd {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       int n1=sc.nextInt();
+       int n2=sc.nextInt();
+       int a=n1+n2;
+       if(a%2==0){
+           System.out.print(a+"is even number");
+       }else{
+           System.out.print(a+"is odd number");
+       }
+    }
+    
+}
