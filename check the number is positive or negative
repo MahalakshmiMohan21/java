@@ -1,0 +1,16 @@
+package checkposornegnumber;
+import java.util.*;
+public class Checkposornegnumber {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n<0){
+            System.out.print("number is positive");
+        }else if(n>0){
+            System.out.print("number is negative");
+        }else{
+            System.out.print("number is zero");
+        }
+    }
+    
+}
