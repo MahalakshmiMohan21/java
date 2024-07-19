@@ -1,0 +1,27 @@
+import java.util.*;
+public class Countnumloweruppervowelspecialchar {
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.nextLine();
+        int count1=0,count2=0,count3=0,count4=0,count5=0;
+        for(int i=0;i<s1.length();i++){
+            if(Character.isLowerCase(s1.charAt(i))){
+                count1++;
+            }
+            else if(Character.isUpperCase(s1.charAt(i))){
+                count2++;
+            }else if(Character.isDigit(s1.charAt(i))){
+                count3++;
+                
+            
+            }
+            else{
+                count5++;
+            }
+            
+            if(s1.charAt(i)=='a'|| s1.charAt(i)=='e' || s1.charAt(i)=='i' || s1.charAt(i)=='o' || s1.charAt(i)=='u' || s1.charAt(i)=='A'|| s1.charAt(i)=='E'|| s1.charAt(i)=='I'|| s1.charAt(i)=='O'|| s1.charAt(i)=='U'){
+                count4++;}
+        }
+        System.out.println("uppercase:"+ count2 +" lowercase:" + count1 + " numbers:"+count3+" vowels:"+count4+" special character:"+count5);
+    }
+}
