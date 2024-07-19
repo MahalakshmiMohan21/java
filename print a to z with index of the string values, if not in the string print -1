@@ -1,0 +1,19 @@
+import java.util.*;
+public class Indexatoz {
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.nextLine();
+      
+         
+        for(char i='a';i<='z';i++){
+            int index=s1.indexOf(i);
+            if(index!=-1){
+            System.out.println(i+""+"("+index+")");
+            
+            
+            }else {
+            System.out.println(i+"(-1)");
+        }
+        } 
+    }
+}
