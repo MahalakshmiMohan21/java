@@ -1,0 +1,47 @@
+import java.util.*;
+class Solution {
+    public int romanToInt(String s) {
+       int res=0;
+       int curval=0;
+       int nexval=0;
+       for(int i=0;i<s.length();i++){
+        
+        switch (s.charAt(i)) {
+                case 'I': curval = 1; break;
+                case 'V': curval = 5; break;
+                case 'X': curval = 10; break;
+                case 'L': curval = 50; break;
+                case 'C': curval = 100; break;
+                case 'D': curval = 500; break;
+                case 'M': curval = 1000; break;
+            }
+        if(i+1<s.length()){
+           switch (s.charAt(i + 1)) {
+                    case 'I': nexval = 1; break;
+                    case 'V': nexval = 5; break;
+                    case 'X': nexval = 10; break;
+                    case 'L': nexval = 50; break;
+                    case 'C': nexval = 100; break;
+                    case 'D': nexval = 500; break;
+                    case 'M': nexval = 1000; break;
+                }
+            
+        }
+
+        if(curval<nexval){
+            res-=curval;
+        }else {
+            res+=curval;
+        }
+
+       }
+       return res;
+    }
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        Solution sol=new Solution();
+        int result=sol.romanToInt(s);
+        System.out.print(result);
+    }
+}
